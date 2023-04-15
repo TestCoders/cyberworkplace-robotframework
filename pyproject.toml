@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "testcoders-robotframework"
+version = "0.1.0"
+description = ""
+authors = ["Mark de Wit <mark@testcoders.nl>"]
+readme = "README.md"
+packages = [{include = "testcoders_robotframework"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+robotframework = "^6.0.2"
+robotframework-browser = "^16.0.2"
+robotframework-requests = "^0.9.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
