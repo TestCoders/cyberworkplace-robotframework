@@ -8,7 +8,7 @@ This repository is set up to assist in the workshop given by Testcoders for Cybe
 
 To get this example work as expected The following need to be installed:
 - Python - version 3.8 or higher
-- Poetry - vesion 1.3 or higher
+- Poetry - version 1.3 or higher
 
 ### IDE's:
 
