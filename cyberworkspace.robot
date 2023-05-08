@@ -11,12 +11,13 @@ ${BROWSER}    chromium
 ${HEADLESS}    False
 
 *** Test Cases ***
-Add Two ToDos And Check Items
-    [Documentation]    Search for Cyberworkplace in the search field
+Search for Cyberworkplace in search field
+    [Documentation]    Search for Cyberworkplace in search field
     [Tags]    Search Cyberworkplace
     Given Cyberworkplace homepage is open
     When I open the "About us" page
     Then I Search for "Cyberworkplace"
+    Then I check the cookies
 
 *** Keywords ***
 Cyberworkplace homepage is open
@@ -31,3 +32,10 @@ I Search for "Cyberworkplace"
     Fill Text   css=#search-form-1  Cyberworkplace
     Click   css=button.search-submit
     Get Element count   css=article     equal   5
+
+I check the cookies
+    ${cookie_default}=  Get Cookie     mc_session_ids[default]
+    ${cookie_multi_0}=  Get Cookie      mc_session_ids[multi][0]
+    ${cookies}=     Get Cookies
+    # Should Not Be Equal      ${cookie_default}     ${cookie_multi_0}
+    Should Be Equal     ${cookie_default}   ${cookies}
