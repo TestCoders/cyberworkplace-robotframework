@@ -12,10 +12,11 @@ ${HEADLESS}    False
 
 *** Test Cases ***
 Add Two ToDos And Check Items
-    [Documentation]    Checks if ToDos can be added and ToDo count increases
-    [Tags]    Add ToDo
+    [Documentation]    Search for Cyberworkplace in the search field
+    [Tags]    Search Cyberworkplace
     Given Cyberworkplace homepage is open
     When I open the "About us" page
+    Then I Search for "Cyberworkplace"
 
 *** Keywords ***
 Cyberworkplace homepage is open
@@ -23,4 +24,10 @@ Cyberworkplace homepage is open
 
 I open the "About us" page
     Click   text="About us"
-    Browser.Get Title   equal   "something wrong"
+    Browser.Get Title   equal   About us | Cyberworkplace | Cybersecurity training
+
+I Search for "Cyberworkplace"
+    Scroll To   css=#search-form-1
+    Fill Text   css=#search-form-1  Cyberworkplace
+    Click   css=button.search-submit
+    Get Element count   css=article     equal   5
