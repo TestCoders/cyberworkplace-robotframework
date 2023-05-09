@@ -34,8 +34,8 @@ Python:
 https://www.python.org/about/gettingstarted/
 
 Poetry:
-To install Poetry execute following command in Poewershell:
-`(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python –`
+To install Poetry execute following command in Powershell:
+`(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python`
 
 ### Other
 
