@@ -45,7 +45,7 @@ https://python-poetry.org/
 
 ## Installation
 
-Before continuing with further insstallation, please verify the versions of Python and Poetry stated in: Pre Requisites.
+Before continuing with further installation, please verify the versions of Python and Poetry stated in: Pre Requisites.
 
 When Python and Poetry are installed, following commands can be executed:
 
